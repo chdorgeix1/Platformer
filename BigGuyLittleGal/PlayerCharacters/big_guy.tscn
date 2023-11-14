@@ -2,9 +2,6 @@
 
 [ext_resource type="Texture2D" uid="uid://ct5rcoycfd5du" path="res://BigGuyFinal3.png" id="1_bprck"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7lwyf"]
-size = Vector2(60, 58)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_1ynfc"]
 animations = [{
 "frames": [{
@@ -16,16 +13,19 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="BigGuy" type="CharacterBody2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7lwyf"]
+size = Vector2(60, 58)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 1)
-shape = SubResource("RectangleShape2D_7lwyf")
+[node name="BigGuy" type="CharacterBody2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 scale = Vector2(2.15625, 2.15625)
 sprite_frames = SubResource("SpriteFrames_1ynfc")
 animation = &"Idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_7lwyf")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
