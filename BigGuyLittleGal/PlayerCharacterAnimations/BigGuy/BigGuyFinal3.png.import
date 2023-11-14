@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ct5rcoycfd5du"
-path="res://.godot/imported/BigGuyFinal3.png-e51ed498442db0c73a9193177977c925.ctex"
+path="res://.godot/imported/BigGuyFinal3.png-ee04660c783618010e876f01f22631d5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://BigGuyFinal3.png"
-dest_files=["res://.godot/imported/BigGuyFinal3.png-e51ed498442db0c73a9193177977c925.ctex"]
+source_file="res://PlayerCharacterAnimations/BigGuy/BigGuyFinal3.png"
+dest_files=["res://.godot/imported/BigGuyFinal3.png-ee04660c783618010e876f01f22631d5.ctex"]
 
 [params]
 

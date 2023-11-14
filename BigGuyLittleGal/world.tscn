@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bnuopww2cbmqm" path="res://Sunny-land-files/Graphical Assets/environment/tileset.png" id="1_unq28"]
 [ext_resource type="PackedScene" uid="uid://cg25ngsqhynja" path="res://parallax_background.tscn" id="2_3ld15"]
-[ext_resource type="PackedScene" uid="uid://c54ripvdwkbaf" path="res://PlayerCharacters/big_guy.tscn" id="3_5axys"]
+[ext_resource type="PackedScene" uid="uid://v13aah4rc7x4" path="res://PlayerCharacters/big_guy.tscn" id="3_5axys"]
 [ext_resource type="PackedScene" uid="uid://c64r6vjs3wanp" path="res://PlayerCharacters/little_gal.tscn" id="4_cjtfj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5nt2c"]
