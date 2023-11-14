@@ -1,16 +1,28 @@
-[gd_scene load_steps=4 format=3 uid="uid://c64r6vjs3wanp"]
+[gd_scene load_steps=7 format=3 uid="uid://c64r6vjs3wanp"]
 
-[ext_resource type="Texture2D" uid="uid://dm6ne8w4eueyi" path="res://PlayerCharacters/LittleGalTake5.png" id="1_c8ity"]
+[ext_resource type="Script" path="res://PlayerCharacters/little_gal.gd" id="1_mo1x4"]
+[ext_resource type="Texture2D" uid="uid://clknfq0btjxap" path="res://PlayerCharacterAnimations/LittleGal/LittleGalIdle-SpriteSheet.png" id="2_tw44t"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x13ut"]
+atlas = ExtResource("2_tw44t")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_njsso"]
+atlas = ExtResource("2_tw44t")
+region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_27v74"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_c8ity")
+"texture": SubResource("AtlasTexture_x13ut")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_njsso")
 }],
 "loop": true,
 "name": &"Idle",
-"speed": 5.0
+"speed": 3.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jl04u"]
@@ -18,6 +30,7 @@ radius = 15.0
 height = 52.0
 
 [node name="LittleGal" type="CharacterBody2D"]
+script = ExtResource("1_mo1x4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
@@ -25,10 +38,8 @@ position = Vector2(-1, -2.84217e-14)
 scale = Vector2(1.71875, 1.71875)
 sprite_frames = SubResource("SpriteFrames_27v74")
 animation = &"Idle"
+frame_progress = 0.984904
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1)
 shape = SubResource("CapsuleShape2D_jl04u")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-root_node = NodePath("../CollisionShape2D")
